@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCityCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="City, Country" />
+
+    <TextView
+        android:id="@+id/tvUpdatedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/updated"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="@+id/tvCityCountry"
+        app:layout_constraintStart_toStartOf="@+id/tvCityCountry"
+        app:layout_constraintTop_toBottomOf="@+id/tvCityCountry" />
+
+    <TextView
+        android:id="@+id/tvWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/weather"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="@+id/tvCityCountry"
+        app:layout_constraintStart_toStartOf="@+id/tvCityCountry"
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdatedTime" />
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/textColor"
+        android:textSize="90sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCityCountry"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/tvCityCountry"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeather"
+        tools:text="30°C" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvCityCountry"
+        app:layout_constraintStart_toStartOf="@+id/tvCityCountry"
+        app:layout_constraintTop_toBottomOf="@+id/tvTemp"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvSunrise"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/sunrise"
+                android:textColor="@color/textColor"
+                app:drawableTopCompat="@drawable/ic_sunrise" />
+
+            <TextView
+                android:id="@+id/tvSunset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/sunset"
+                android:textColor="@color/textColor"
+                app:drawableTopCompat="@drawable/ic_sunset" />
+
+            <TextView
+                android:id="@+id/tvWind"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/wind"
+                android:textColor="@color/textColor"
+                app:drawableTopCompat="@drawable/ic_wind" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvPressure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/pressure"
+                android:textColor="@color/textColor"
+                app:drawableTopCompat="@drawable/ic_pressure" />
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/humidity"
+                android:textColor="@color/textColor"
+                app:drawableTopCompat="@drawable/ic_humidity" />
+
+            <TextView
+                android:id="@+id/tvCloud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/cloud"
+                android:textColor="@color/textColor"
+                app:drawableTopCompat="@drawable/ic_cloud" />
+
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
